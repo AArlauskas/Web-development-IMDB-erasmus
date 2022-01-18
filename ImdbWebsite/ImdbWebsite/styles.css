@@ -1,3 +1,13 @@
 ﻿.table-container {
     margin: 30px;
 }
+
+.table-row:hover { 
+   background: lightgray; 
+   cursor: pointer;
+}
+
+#driver-img {
+    width: 200px;
+    height: 200px;
+}

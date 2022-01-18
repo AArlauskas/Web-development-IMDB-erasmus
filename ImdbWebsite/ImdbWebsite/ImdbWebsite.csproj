@@ -138,6 +138,10 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
+    <Content Include="driver-details.html" />
+    <Content Include="driver-details.js" />
+    <Content Include="race-details.html" />
+    <Content Include="race-details.js" />
     <Content Include="races.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
