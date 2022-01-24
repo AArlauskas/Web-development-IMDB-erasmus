@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="circuit-details.html" />
+    <Content Include="circuit-details.js" />
+    <Content Include="constructor-details.html" />
+    <Content Include="constructor-details.js" />
     <Content Include="Content\all.css" />
     <Content Include="Content\all.min.css" />
     <Content Include="Content\bootstrap-grid.css" />

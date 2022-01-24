@@ -1,9 +1,16 @@
 ﻿const races = ko.observableArray([])
 ko.applyBindings()
+var a = 1;
+var hasPrevious = false;
+var hasNext = true;
+
+
+
+    
 
 $(document).ready(function() {
     $.ajax({
-        url: "http://192.168.160.58/Formula1/api/races?page=1&pagesize=20",
+        url: "http://192.168.160.58/Formula1/api/races?page="+a+"&pagesize=20",
         context: "application/json",
         method: "GET",
         success: (response) => {
@@ -22,5 +29,10 @@ $(document).ready(function() {
             }
         })
     })
+    $("#table-search").keyup(function (event) {
+        if (event.keyCode === 13) {
+            $("#button-table-search").click();
+        }
+    });
 });
 

@@ -31,7 +31,6 @@ $(document).ready(() => {
             document.getElementById("driver-races-count").innerHTML = `Races: ${response['Races']}`;
             document.getElementById("driver-races-win").innerHTML = `Wins: ${response['Wins']}`;
             statistics(response["Career"]);
-            //races(response["Races"])
         }
     });
 })
