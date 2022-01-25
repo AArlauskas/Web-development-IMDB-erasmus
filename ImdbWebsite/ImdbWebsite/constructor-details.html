@@ -62,6 +62,26 @@
                             Name
                         </th>
                         <th scope="col">
+                            Nationality
+                        </th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach:drivers">
+                    <tr class="table-row" data-bind="click:onDriverTableRowClick">
+                        <td class="align-middle" data-bind="text:Name"></td>
+                        <td class="align-middle" data-bind="text:Nationality"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row collapse" id="collapseRaces">
+            <table class="table table-striped">
+                <thead class="bg-dark text-light">
+                    <tr>
+                        <th scope="col">
+                            Name
+                        </th>
+                        <th scope="col">
                             Circuit Name
                         </th>
                         <th scope="col">
@@ -69,40 +89,17 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody data-bind="foreach:drivers">
-                    <tr class="table-row" data-bind="click:onTableRowClick">
+                <tbody data-bind="foreach:races">
+                    <tr class="table-row" data-bind="click:onRaceTableRowClick">
                         <td class="align-middle" data-bind="text:Name"></td>
-                        <td class="align-middle" data-bind="text:Nationality"></td>
+                        <td class="align-middle" data-bind="text:CircuitName"></td>
                         <td class="align-middle" data-bind="text:Year"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="row collapse" id="collapseDrivers">
-        <table class="table table-striped">
-            <thead class="bg-dark text-light">
-                <tr>
-                    <th scope="col">
-                        Year
-                    </th>
-                    <th scope="col">
-                        Position
-                    </th>
-                    <th scope="col">
-                        Points
-                    </th>
-                </tr>
-            </thead>
-            <tbody data-bind="foreach:statistics">
-                <tr>
-                    <td class="align-middle" data-bind="text:Year"></td>
-                    <td class="align-middle" data-bind="text:Position"></td>
-                    <td class="align-middle" data-bind="text:Points"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+
 
     <script src="Scripts/jquery-3.6.0.min.js"></script>
     <script src="Scripts/knockout-3.5.1.js"></script>

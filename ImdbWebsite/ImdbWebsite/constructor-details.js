@@ -1,4 +1,9 @@
-﻿$(document).ready(() => {
+﻿const races = ko.observableArray();
+const drivers = ko.observableArray();
+
+ko.applyBindings();
+
+$(document).ready(() => {
     const parameters = new URLSearchParams(window.location.search);
     const id = parameters.get("id");
 
@@ -14,9 +19,18 @@
             document.getElementById("wiki-url").setAttribute("href", response["Url"]);
             document.getElementById("constructor-name").innerHTML = response["Name"];
             document.getElementById("constructor-nationality").innerHTML = `Nationality: ${response["Nationality"]}`;
-            //document.getElementById("race-date").innerHTML = response["Date"].split("T")[0];
-
-            //results(response["Results"].filter(el => el.Position < 10))
+            races(response["Races"]);
+            drivers(response["Drivers"]);
         }
     });
 })
+
+const onDriverTableRowClick = (data) => {
+    const driverId = data["DriverId"];
+    window.location.href = `driver-details.html?id=${driverId}`
+}
+
+const onRaceTableRowClick = (data) => {
+    const raceId = data["RaceId"];
+    window.location.href = `race-details.html?id=${raceId}`
+}

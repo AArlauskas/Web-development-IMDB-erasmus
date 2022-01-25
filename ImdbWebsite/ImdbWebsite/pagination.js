@@ -1,4 +1,9 @@
-﻿const next = searchname => {
+﻿var a = 1;
+var hasPrevious = false;
+var hasNext = true;
+
+
+const next = searchname => {
     if (hasNext) {
         if (!hasPrevious) {
             document.getElementById("button-previous-clch").className = "page-item";

@@ -1,13 +1,6 @@
 ﻿const races = ko.observableArray([])
 ko.applyBindings()
-var a = 1;
-var hasPrevious = false;
-var hasNext = true;
-
-
-
     
-
 $(document).ready(function() {
     $.ajax({
         url: "http://192.168.160.58/Formula1/api/races?page="+a+"&pagesize=20",

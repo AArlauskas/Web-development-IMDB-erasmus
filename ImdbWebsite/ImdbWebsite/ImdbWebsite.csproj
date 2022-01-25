@@ -144,6 +144,7 @@
     <Content Include="Content\v4-shims.min.css" />
     <Content Include="driver-details.html" />
     <Content Include="driver-details.js" />
+    <Content Include="pagination.js" />
     <Content Include="race-details.html" />
     <Content Include="race-details.js" />
     <Content Include="races.js" />
