@@ -1,9 +1,23 @@
 ﻿var a = 1;
 var hasPrevious = false;
 var hasNext = true;
-
+var maxpage;
 
 const next = searchname => {
+
+
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://192.168.160.58/Formula1/api/" + searchname + "?page=" + a + "&pagesize=20",
+            context: "application/json",
+            method: "GET",
+            success: (response) => {
+                maxpage = response['PageCount']
+
+            }
+        })
+      
+    });
     if (hasNext) {
         if (!hasPrevious) {
             document.getElementById("button-previous-clch").className = "page-item";
@@ -19,7 +33,7 @@ const next = searchname => {
                 console.log(response)
                 hasNext = response["HasNext"]
                 hasPrevious = response["HasPrevious"]
-                races(response["List"])
+                table(response["List"])
                 if (!response["HasNext"]) {
                     document.getElementById("button-next-clch").className = "page-item disabled";
                     document.getElementById("button-next-clch2").className = "page-item disabled";
@@ -40,7 +54,7 @@ const lastpage = searchname => {
         document.getElementById("button-first-clch").className = "page-item";
         document.getElementById("button-first-clch2").className = "page-item";
     }
-    a = 53
+    a = maxpage
     $.ajax({
         url: "http://192.168.160.58/Formula1/api/" + searchname +"?page=" + a + "&pagesize=20",
         method: "GET",
@@ -48,7 +62,7 @@ const lastpage = searchname => {
             console.log(response)
             hasNext = response["HasNext"]
             hasPrevious = response["HasPrevious"]
-            races(response["List"])
+            table(response["List"])
             document.getElementById("button-next-clch").className = "page-item disabled";
             document.getElementById("button-next-clch2").className = "page-item disabled";
             document.getElementById("button-last-clch").className = "page-item disabled";
@@ -74,7 +88,7 @@ const previous = searchname => {
                 console.log(response)
                 hasNext = response["HasNext"]
                 hasPrevious = response["HasPrevious"]
-                races(response["List"])
+                table(response["List"])
                 if (!response["HasPrevious"]) {
                     document.getElementById("button-previous-clch").className = "page-item disabled";
                     document.getElementById("button-previous-clch2").className = "page-item disabled";
@@ -100,7 +114,7 @@ const firstpage = searchname => {
             console.log(response)
             hasNext = response["HasNext"]
             hasPrevious = response["HasPrevious"]
-            races(response["List"])
+            table(response["List"])
             document.getElementById("button-previous-clch").className = "page-item disabled";
             document.getElementById("button-previous-clch2").className = "page-item disabled";
             document.getElementById("button-first-clch").className = "page-item disabled";
