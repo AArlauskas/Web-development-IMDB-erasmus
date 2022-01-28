@@ -25,7 +25,13 @@ $(document).ready(() => {
     });
 });
 
-const onTableRowClick = (data) => {
+const onTableRowClick = (data, event) => {
+    if (event.target.className === "link") return;
     const raceId = data["RaceId"];
     window.location.href = `race-details.html?id=${raceId}`
+}
+
+const onYearClick = (data) => {
+    const year = data["Year"];
+    window.location.href = `season-details.html?year=${year}`;
 }

@@ -26,11 +26,17 @@ $(document).ready(() => {
 })
 
 const onDriverTableRowClick = (data) => {
+    if (event.target.className === "link") return;
     const driverId = data["DriverId"];
     window.location.href = `driver-details.html?id=${driverId}`
 }
 
 const onRaceTableRowClick = (data) => {
+    if (event.target.className === "link") return;
     const raceId = data["RaceId"];
     window.location.href = `race-details.html?id=${raceId}`
+}
+const onYearClick = (data) => {
+    const year = data["Year"];
+    window.location.href = `season-details.html?year=${year}`;
 }

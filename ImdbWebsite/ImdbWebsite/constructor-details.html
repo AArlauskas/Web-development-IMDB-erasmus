@@ -93,7 +93,9 @@
                     <tr class="table-row" data-bind="click:onRaceTableRowClick">
                         <td class="align-middle" data-bind="text:Name"></td>
                         <td class="align-middle" data-bind="text:CircuitName"></td>
-                        <td class="align-middle" data-bind="text:Year"></td>
+                        <td class="align-middle">
+                            <p class="link" data-bind="text: Year, click: onYearClick"></p>
+                        </td>
                     </tr>
                 </tbody>
             </table>
