@@ -148,10 +148,13 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Content\v4-shims.css" />
     <Content Include="Content\v4-shims.min.css" />
+    <Content Include="country-details.html" />
+    <Content Include="country-details.js" />
     <Content Include="driver-details.html" />
     <Content Include="driver-details.js" />
     <Content Include="drivers.html" />
     <Content Include="drivers.js" />
+    <Content Include="index.html" />
     <Content Include="pagination.js" />
     <Content Include="race-details.html" />
     <Content Include="race-details.js" />

@@ -2,9 +2,9 @@
     margin: 30px;
 }
 
-.table-row:hover { 
-   background: lightgray; 
-   cursor: pointer;
+.table-row:hover {
+    background: lightgray;
+    cursor: pointer;
 }
 
 #driver-img {
@@ -17,7 +17,55 @@
     cursor: pointer;
 }
 
-.link:hover {
-    color: darkblue;
-    text-decoration: underline;
+    .link:hover {
+        color: darkblue;
+        text-decoration: underline;
+    }
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 32rem;
+    background-color: #777;
+}
+
+    .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 32rem;
+    }
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: 400;
+}
+
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+.home-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.home-nav a:hover {
+    cursor: pointer;
+    color: green;
 }
