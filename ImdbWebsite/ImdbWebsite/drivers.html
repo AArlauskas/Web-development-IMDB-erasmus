@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Formula 1 | Races</title>
+    <title>Formula 1 | Drivers</title>
     <link href="./Content/bootstrap.min.css" rel="stylesheet">
     <link href="./styles.css" rel="stylesheet" />
 </head>
@@ -43,17 +43,17 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
                 <li id="button-first-clch" class="page-item disabled">
-                    <a id="button-first" class="page-link " onclick="firstpage('races')" href="#">First page</a>
+                    <a id="button-first" class="page-link " onclick="firstpage('drivers')" href="#">First page</a>
                 </li>
                 <li id="button-previous-clch" class="page-item disabled">
-                    <a id="button-previous" class="page-link " onclick="previous('races')" href="#">Previous</a>
+                    <a id="button-previous" class="page-link " onclick="previous('drivers')" href="#">Previous</a>
                 </li>
                 <li class="page-item disabled"><a class="page-link" id="current-page">1</a></li>
                 <li id="button-next-clch" class="page-item">
-                    <a id="button-next" class="page-link" onclick="next('races')" href="#">Next</a>
+                    <a id="button-next" class="page-link" onclick="next('drivers')" href="#">Next</a>
                 </li>
                 <li id="button-last-clch" class="page-item">
-                    <a id="button-last" class="page-link" onclick="lastpage('races')" href="#">Last page</a>
+                    <a id="button-last" class="page-link" onclick="lastpage('drivers')" href="#">Last page</a>
                 </li>
             </ul>
         </nav>
@@ -65,18 +65,18 @@
                         Name
                     </th>
                     <th scope="col">
-                        Circuit name
+                        Nationality
                     </th>
                     <th scope="col">
-                        Year
+                        DriverId
                     </th>
                 </tr>
             </thead>
             <tbody data-bind="foreach:table">
                 <tr class="table-row" data-bind="click:onTableRowClick">
                     <td class="align-middle" data-bind="text:Name"></td>
-                    <td class="align-middle" data-bind="text:CircuitName"></td>
-                    <td class="align-middle" data-bind="text:Year"></td>
+                    <td class="align-middle" data-bind="text:Nationality"></td>
+                    <td class="align-middle" data-bind="text:DriverId"></td>
 
                 </tr>
             </tbody>
@@ -84,25 +84,25 @@
     </div>
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
-            <li id ="button-first-clch2" class="page-item disabled">
-                <a id="button-first2" class="page-link " onclick="firstpage('races')"  href="#">First page</a>
+            <li id="button-first-clch2" class="page-item disabled">
+                <a id="button-first2" class="page-link " onclick="firstpage('drivers')" href="#">First page</a>
             </li>
-            <li id ="button-previous-clch2" class="page-item disabled">
-                <a id="button-previous2" class="page-link " onclick="previous('races')" href="#">Previous</a>
+            <li id="button-previous-clch2" class="page-item disabled">
+                <a id="button-previous2" class="page-link " onclick="previous('drivers')" href="#">Previous</a>
             </li>
-            <li class="page-item disabled"><a class="page-link" id ="current-page2">1</a></li>
-            <li id ="button-next-clch2"class="page-item">
-                <a id="button-next2" class="page-link" onclick="next('races')" href="#">Next</a>
+            <li class="page-item disabled"><a class="page-link" id="current-page2">1</a></li>
+            <li id="button-next-clch2" class="page-item">
+                <a id="button-next2" class="page-link" onclick="next('drivers')" href="#">Next</a>
             </li>
-            <li id ="button-last-clch2"class="page-item">
-                <a id="button-last2" class="page-link" onclick="lastpage('races')"href="#">Last page</a>
+            <li id="button-last-clch2" class="page-item">
+                <a id="button-last2" class="page-link" onclick="lastpage('drivers')" href="#">Last page</a>
             </li>
         </ul>
     </nav>
     <script src="Scripts/jquery-3.6.0.min.js"></script>
     <script src="Scripts/knockout-3.5.1.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
-    <script src="races.js"></script>
+    <script src="drivers.js"></script>
     <script src="pagination.js"></script>
 </body>
 </html>
