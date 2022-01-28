@@ -16,7 +16,7 @@ $(document).ready(() => {
             }
             document.getElementById("wiki-url").setAttribute("href", response["Url"]);
             document.getElementById("circuit-name").innerHTML = response["Name"];
-            document.getElementById("circuit-country").innerHTML = `Country: ${response["Country"]}`;
+            document.getElementById("circuit-country").innerHTML = `${response["Country"]}`;
             document.getElementById("circuit-location").innerHTML = `Location: ${response["Location"]}`;
 
             races(response["Races"]);
@@ -34,4 +34,18 @@ const onTableRowClick = (data, event) => {
 const onYearClick = (data) => {
     const year = data["Year"];
     window.location.href = `season-details.html?year=${year}`;
+}
+
+const onCountryClick = (event) => {
+    const country = event.target.innerHTML;
+    $.ajax({
+        url: `http://192.168.160.58/Formula1/api/search/countries?q=${country}`,
+        context: "application/json",
+        method: "GET",
+        success: (response) => {
+            const id = response[0]["CountryId"];
+            if (id === undefined) return;
+            window.location.href = `country-details.html?id=${id}`
+        }
+    });
 }
