@@ -14,6 +14,7 @@ $(document).ready(() => {
             document.getElementById("race-name").innerHTML = response["Name"];
             document.getElementById("race-circuit-name").innerHTML = `Circuit: ${response["Name"]}`;
             document.getElementById("race-date").innerHTML = response["Date"].split("T")[0];
+            document.getElementById("race-year").innerHTML = response["Year"];
 
             results(response["Results"].filter(el => el.Position < 10))
         }
@@ -23,4 +24,9 @@ $(document).ready(() => {
 const onTableRowClick = (data) => {
     const driverId = data["DriverId"];
     window.location.href = `driver-details.html?id=${driverId}`
+}
+
+const onYearClick = (e) => {
+    const year = e.target.innerHTML;
+    window.location.href = `season-details.html?year=${year}`;
 }

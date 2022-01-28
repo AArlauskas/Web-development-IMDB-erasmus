@@ -11,3 +11,13 @@
     width: 200px;
     height: 200px;
 }
+
+.link {
+    color: blue;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
