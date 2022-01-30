@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Formula 1 | Driver details</title>
+    <link href="Content/fontawesome.min.css" rel="stylesheet" />
+    <link href="./Content/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Formula 1</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="races.html">Races</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="drivers.html">Drivers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="constructors.html">Constructors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="circuits.html">Circuits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nationalities.html">Nationalities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Champions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="champions.html">Drivers</a></li>
+                            <li><a class="dropdown-item" href="cchampions.html">Constructors</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="table-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h4 id="nationality-name" />
+            </div>
+            <button class="btn btn-primary m-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRaces" aria-expanded="false" aria-controls="collapseRaces">
+                Drivers
+            </button>
+            <button class="btn btn-primary m-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStatistics" aria-expanded="false" aria-controls="collapseStatistics">
+                Constructors
+            </button>
+            <div class="row collapse" id="collapseRaces">
+                <table class="table table-striped">
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th scope="col">
+                                Name
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach:drivers">
+                        <tr class="table-row" data-bind="click:onTableRowClickD">
+                            <td class="align-middle" data-bind="text:Name"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row collapse" id="collapseStatistics">
+                <table class="table table-striped">
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th scope="col">
+                                Name
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach:constructors">
+                        <tr class="table-row" data-bind="click:onTableRowClickC">
+                            <td class="align-middle" data-bind="text:Name"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.6.0.min.js"></script>
+    <script src="Scripts/knockout-3.5.1.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="nationality-details.js"></script>
+</body>
+</html>
